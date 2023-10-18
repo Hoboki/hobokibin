@@ -1,0 +1,6 @@
+#!/bin/bash -eu
+ssh -F ~/hobokibin/.ssh/config 2b2 'curl -sk https://cinet-p-web.nict.go.jp/wp/pc_nw/ | grep -o -E "https://cinet-p-web.nict.go.jp/wp/wp-content/uploads.*?png" | head -1 | xargs curl -k --output ~/Downloads/.CiNetWiFi.png' -s
+
+scp -F ~/hobokibin/.ssh/config 2b2:~/Downloads/.CiNetWiFi.png ~/Downloads/CiNetWiFi.png
+
+open ~/Downloads/CiNetWiFi.png

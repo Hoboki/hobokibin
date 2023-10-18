@@ -1,0 +1,2 @@
+alias res="exec $SHELL -l"
+alias ll="ls -la"
