@@ -19,7 +19,7 @@ pushMsg() {
 }
 
 res=`pushMsg "$1"`
-if [[ "$res" =~ \"message\": ]]; then
+if [[ "$res" =~ message ]]; then
     # Error
     echo `echo $res | sed -E 's/.*"message":"(.*)"}/\1/'`
 else
