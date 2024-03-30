@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 set -u
 
 source import-env $HOME/hobokibin/.env
