@@ -1,3 +1,4 @@
 alias res="exec $SHELL -l"
 alias ll="ls -la"
 alias ma="mamba activate"
+alias md="mamba deactivate"
