@@ -25,12 +25,10 @@ ojc() {
     t=${1:-2}
     name=${2:-main}
     others=${@:3}
-    ma ac
     gcc $name.cpp -std=c++17 -lstdc++ -lm -I /project/nblab/kkawahata/atCoder/ac-library/ -fconcepts && \
     oj t -t $t -N ${others} && \
     oj s $name.cpp
 }
-
 ojp() {
     t=${1:-2}
     name=${2:-main}
