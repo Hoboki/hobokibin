@@ -3,3 +3,18 @@ alias ll="ls -la"
 alias gitc="git commit -m"
 alias ma="mamba activate"
 alias md="mamba deactivate"
+# alias ojc="gcc main.cpp -std=c++17 -lstdc++ -lm -I /project/nblab/kkawahata/atCoder/ac-library/ -fconcepts && oj t -t 2 && oj s main.cpp"
+# alias ojp="oj t -c \"python main.py\" && oj s main.py"
+
+ojc() {
+    t=${1:-2}
+    gcc main.cpp -std=c++17 -lstdc++ -lm -I /project/nblab/kkawahata/atCoder/ac-library/ -fconcepts && \
+    oj t -t $t && \
+    oj s main.cpp
+}
+
+ojp() {
+    t=${1:-2}
+    oj t -c \"python main.py\" -t $t && \
+    oj s main.py
+}

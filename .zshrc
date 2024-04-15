@@ -2,12 +2,10 @@
 
 PATH=~/hobokibin/bin:$PATH
 
-HOBOKIBIN_PATH=~/hobokibin
-
-if [ -f $HOBOKIBIN_PATH/.alias ]; then
-    source $HOBOKIBIN_PATH/.alias
+if [ -f ~/hobokibin/.alias ]; then
+    . ~/hobokibin/.alias
 fi
 
-if [ -f $HOBOKIBIN_PATH/.git_completion ]; then
-    source $HOBOKIBIN_PATH/.git_completion
+if [ -f ~/hobokibin/.git_completion ]; then
+    . ~/hobokibin/.git_completion
 fi
