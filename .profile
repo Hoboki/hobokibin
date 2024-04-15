@@ -1,3 +1,3 @@
-if [ -f ~/hobokibin/.gpu ]; then
-    . ~/hobokibin/.gpu
+if [ -f $HOBOKIBIN_PATH/.gpu ]; then
+    . $HOBOKIBIN_PATH/.gpu
 fi
