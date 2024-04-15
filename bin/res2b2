@@ -1,2 +1,0 @@
-lsof -t -i:55900 | xargs kill -9
-ssh 2b2 -Nf

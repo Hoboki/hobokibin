@@ -1,3 +1,0 @@
-source import-env $HOME/hobokibin/.env
-
-open -a "Google Chrome" http://$NICT_CLUSTER_CHECKER_IP/zabbix/zabbix.php?action=dashboard.view

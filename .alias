@@ -3,3 +3,39 @@ alias ll="ls -la"
 alias gitc="git commit -m"
 alias ma="mamba activate"
 alias md="mamba deactivate"
+alias mi="mamba install -y"
+alias scs="screen -S"
+alias scr="screen -r"
+alias scls="screen -ls"
+
+ac() {
+    path=${$1:-.}
+    source $1/.venv/bin/activate
+}
+
+ojpr() {
+    num=$1
+    ma ac
+    mkdir -p /project/nblab/kkawahata/atCoder/abc${num}
+    cd /project/nblab/kkawahata/atCoder/abc${num}
+    oj-prepare https://atcoder.jp/contests/abc${num}
+}
+
+ojc() {
+    t=${1:-2}
+    name=${2:-main}
+    others=${@:3}
+    ma ac
+    gcc $name.cpp -std=c++17 -lstdc++ -lm -I /project/nblab/kkawahata/atCoder/ac-library/ -fconcepts && \
+    oj t -t $t -N ${others} && \
+    oj s $name.cpp
+}
+
+ojp() {
+    t=${1:-2}
+    name=${2:-main}
+    others=${@:3}
+    ma ac
+    oj t -c "python $name.py" -t $t -N ${others} && \
+    oj s $name.py --guess-python-interpreter pypy
+}

@@ -3,6 +3,7 @@ set -u
 source import-env $HOME/hobokibin/.env
 
 pushMsg() {
+    text=`echo ${@}`
     curl -s -X POST https://api.line.me/v2/bot/message/push \
         -H "Content-Type: application/json" \
         -H "Authorization: Bearer $LINE_CHANNEL_ACCESS_TOKEN" \
@@ -11,17 +12,17 @@ pushMsg() {
         \"messages\":[
             {
                 \"type\":\"text\",
-                \"text\":\"$1\"
+                \"text\":\"$text\"
             }
         ]
     }"
 }
 
-res=`pushMsg "$1"`
+res=`pushMsg "${@}"`
 if [[ "$res" =~ message ]]; then
     # Error
     echo `echo $res | sed -E 's/.*"message":"(.*)"}/\1/'`
 else
     # Success
-    echo "The message was sent successfully! [$1]"
+    echo "The message was sent successfully! [${@}]"
 fi
