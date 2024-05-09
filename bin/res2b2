@@ -1,2 +1,4 @@
-lsof -t -i:55900 | xargs kill -9
-ssh 2b2 -Nf
+if [[ -z `lsof -t -i:55900` ]]; then
+    echo `date` "SSH 2B2 STARTED"
+    ssh 2b2 -Nf
+fi
