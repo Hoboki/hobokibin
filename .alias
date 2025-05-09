@@ -1,12 +1,19 @@
 alias res="exec $SHELL -l"
+alias ls="ls --color=auto"
 alias ll="ls -la"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias grep="grep -iEI --color=auto"
+alias scs="screen -S"
+alias scr="screen -r"
+alias scls="screen -ls"
 alias gitc="git commit -m"
 alias ma="mamba activate"
 alias md="mamba deactivate"
 alias mi="mamba install -y"
-alias scs="screen -S"
-alias scr="screen -r"
-alias scls="screen -ls"
+alias py=python
+alias bm="ssh bm01"
 
 ac() {
     path=${$1:-.}
