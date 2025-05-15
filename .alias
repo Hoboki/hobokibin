@@ -14,6 +14,7 @@ alias md="mamba deactivate"
 alias mi="mamba install -y"
 alias py=python
 alias bm="ssh bm01"
+alias lm="line-msg"
 
 ac() {
     path=${$1:-.}
