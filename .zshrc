@@ -1,9 +1,9 @@
 #!/bin/env zsh
 
 export LANG=en_US.UTF-8
-export HOBOKIBIN_PATH=~/hobokibin
 export PATH=$HOBOKIBIN_PATH/bin:$PATH
 export DOCKER_BUILDKIT=1
+export MSG_LINE=true
 
 if [ -f $HOBOKIBIN_PATH/.alias ]; then
     . $HOBOKIBIN_PATH/.alias

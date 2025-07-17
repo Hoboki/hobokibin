@@ -13,6 +13,7 @@ alias gitc="git commit -m"
 alias ma="mamba activate"
 alias md="mamba deactivate"
 alias mi="mamba install -y"
+alias python="python -u"
 alias py=python
 alias bm="ssh bm01"
 alias lm="line-msg"

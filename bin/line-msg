@@ -18,7 +18,11 @@ pushMsg() {
     }"
 }
 
-res=`pushMsg "${@}"`
+res=""
+if "${MSG_LINE}"; then
+    res=`pushMsg "${@}"`
+fi
+
 if [[ "$res" =~ message ]]; then
     # Error
     echo `echo $res | sed -E 's/.*"message":"(.*)"}/\1/'`

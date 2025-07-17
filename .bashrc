@@ -1,5 +1,6 @@
-PATH=~/hobokibin/bin:$PATH
+export PATH=$HOBOKIBIN_PATH/bin:$PATH
+export MSG_LINE=true
 
-if [ -f ~/hobokibin/.alias ]; then
-    . ~/hobokibin/.alias
+if [ -f $HOBOKIBIN_PATH/.alias ]; then
+    . $HOBOKIBIN_PATH/.alias
 fi
