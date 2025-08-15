@@ -19,7 +19,7 @@ pushMsg() {
 }
 
 res=""
-if "${MSG_LINE}"; then
+if "${MSG}"; then
     res=`pushMsg "${@}"`
 fi
 
@@ -28,5 +28,5 @@ if [[ "$res" =~ message ]]; then
     echo `echo $res | sed -E 's/.*"message":"(.*)"}/\1/'`
 else
     # Success
-    echo "The message was sent successfully! [${@}]"
+    echo "The message was sent! [${@}]"
 fi

@@ -3,7 +3,7 @@
 export LANG=en_US.UTF-8
 export PATH=$HOBOKIBIN_PATH/bin:$PATH
 export DOCKER_BUILDKIT=1
-export MSG_LINE=true
+export MSG=true
 
 if [ -f $HOBOKIBIN_PATH/.alias ]; then
     . $HOBOKIBIN_PATH/.alias
