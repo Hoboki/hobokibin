@@ -3,15 +3,17 @@
 Pull at `~` and add below into `~/.zshrc`.
 
 ```zsh
-if [ -f ~/hobokibin/.zshrc ]; then
-  . ~/hobokibin/.zshrc
+export HOBOKIBIN_PATH=~/hobokibin
+if [ -f $HOBOKIBIN_PATH/.zshrc ]; then
+  . $HOBOKIBIN_PATH/.zshrc
 fi
 ```
 
 Otherwise, pull at `~` and add below into `~/.bashrc`.
 
 ```bash
-if [ -f ~/hobokibin/.bashrc ]; then
-  . ~/hobokibin/.bashrc
+export HOBOKIBIN_PATH=~/hobokibin
+if [ -f $HOBOKIBIN_PATH/.bashrc ]; then
+  . $HOBOKIBIN_PATH/.bashrc
 fi
 ```

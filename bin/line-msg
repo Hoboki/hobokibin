@@ -1,6 +1,6 @@
 set -u
 
-source import-env $HOME/hobokibin/.env
+source import-env $HOBOKIBIN_PATH/.env
 
 pushMsg() {
     text=`echo ${@}`

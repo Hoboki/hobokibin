@@ -1,0 +1,13 @@
+set -u
+
+source import-env $HOBOKIBIN_PATH/.env
+
+text=`echo ${@}`
+
+curl -X POST https://slack.com/api/chat.postMessage \
+    -H "Content-type: application/json" \
+    -H "Authorization: Bearer $SLACK_OAUTH_TOKEN" \
+    --data "{
+        \"channel\": \"#$SLACK_CHANNEL_NAME\",
+        \"text\": \"$text\"
+    }"
