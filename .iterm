@@ -4,6 +4,9 @@
 # https://www.rasukarusan.com/entry/2019/04/13/180443
 # https://qiita.com/kompiro/items/a09c0b44e7c741724c80
 
+# Shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
 function badge() {
     printf "\e]1337;SetBadgeFormat=%s\a"\
     $(echo -n "$1" | base64)
