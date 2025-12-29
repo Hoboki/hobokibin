@@ -4,16 +4,12 @@ Pull at `~` and add below into `~/.zshrc`.
 
 ```zsh
 export HOBOKIBIN_PATH=~/hobokibin
-if [ -f $HOBOKIBIN_PATH/.zshrc ]; then
-  . $HOBOKIBIN_PATH/.zshrc
-fi
+test -e $HOBOKIBIN_PATH/.zshrc && . $HOBOKIBIN_PATH/.zshrc || true
 ```
 
 Otherwise, pull at `~` and add below into `~/.bashrc`.
 
 ```bash
 export HOBOKIBIN_PATH=~/hobokibin
-if [ -f $HOBOKIBIN_PATH/.bashrc ]; then
-  . $HOBOKIBIN_PATH/.bashrc
-fi
+test -e $HOBOKIBIN_PATH/.bashrc && . $HOBOKIBIN_PATH/.bashrc || true
 ```
